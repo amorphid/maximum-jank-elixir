@@ -10,7 +10,7 @@ by adding `maximum_jank` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:maximum_jank, "~> 0.1.0"}
+    {:maximum_jank, "~> 0.1"}
   ]
 end
 ```

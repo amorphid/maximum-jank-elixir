@@ -3,7 +3,10 @@ defmodule MaximumJankTest do
   import MaximumJank
 
   describe "&module!/1" do
-    test "returns module",  do: assert module!(MaximumJank) == MaximumJank
+    test "returns module" do
+      assert module!(MaximumJank) == MaximumJank
+      assert module!(:ssl) == :ssl
+    end
 
     test "raises an error" do
       assert_raise RuntimeError, ~r/not a module/, fn -> module!(FakeModule) end
@@ -11,7 +14,10 @@ defmodule MaximumJankTest do
   end
 
   describe "&module?/1" do
-    test "is true",  do: assert module?(MaximumJank) == true
+    test "is true" do
+      assert module?(MaximumJank) == true
+      assert module?(:gen_tcp) == true
+    end
 
     test "is false" do
       assert module?(FakeModule) == false

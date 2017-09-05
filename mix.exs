@@ -50,5 +50,5 @@ defmodule MaximumJank.Mixfile do
     ]
   end
 
-  defp version(), do: "0.1.0"
+  defp version(), do: "0.1.1"
 end
